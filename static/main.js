@@ -55,7 +55,7 @@ function GetRecords() {
             if ("" == e || null == e || "null" == e) ktable = 'NoData', document.getElementById("myRecords").innerHTML = ktable;
             else {
                 obj = JSON.parse(e), table = '';
-                for (var t = Object.keys(obj).length - 1; t >= (0 < Object.keys(obj).length - 10 ? Object.keys(obj).length - 10 : 0); t--) table = table + "<tr><td>" + t + "</td><td>" + obj[t].subdomain + "</td><td>" + obj[t].ip + "</td><td>" + obj[t].time + "</td></tr>";
+                for (var t = Object.keys(obj).length - 1; t >= (0 < Object.keys(obj).length - 100000 ? Object.keys(obj).length - 100000 : 0); t--) table = table + "<tr><td>" + t + "</td><td>" + obj[t].subdomain + "</td><td>" + obj[t].ip + "</td><td>" + obj[t].time + "</td></tr>";
                 document.getElementById("myRecords").innerHTML = table
             }
         }
